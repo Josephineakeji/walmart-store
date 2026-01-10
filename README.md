@@ -20,11 +20,12 @@ Problem statement:
 
 ## Data Structure & Initial Checks
 The walmart database structure as seen below is a comprehensive table consisting of 
-## 2. Data Structure Overview
- Below is the relational structure of the cleaned data:
-<img width="325" height="382" alt="walmart ERD" src="https://github.com/user-attachments/assets/690b267c-d1bf-427a-ad69-66afa8c23209" />
 
-Prior to the analysis, a series of rigorous preprocessing checks were performed on the raw dataset to address inconsistencies, handle missing values, and verify data types. The jupyter notebook with the data loading exploration and cleaning can be found [here](./notebooks/project.ipynb)
+Below is the relational structure of the cleaned data:
+<img width="181" height="336" alt="walmart ERD" src="https://github.com/user-attachments/assets/7748e790-a845-4bd8-82f2-35b2014a7e77" />
+
+Prior to the analysis, a series of rigorous preprocessing checks were performed on the raw dataset to address inconsistencies, handle missing values, and verify data types. The jupyter notebook with the data loading exploration and cleaning can be found [here](project.ipynb)
+
 
 
 
