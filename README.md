@@ -24,7 +24,7 @@ The walmart database structure as seen below is a comprehensive table consisting
  Below is the relational structure of the cleaned data:
 <img width="325" height="382" alt="walmart ERD" src="https://github.com/user-attachments/assets/690b267c-d1bf-427a-ad69-66afa8c23209" />
 
-Prior to the analysis, a series of rigorous preprocessing checks were performed on the raw dataset to address inconsistencies, handle missing values, and verify data types. The jupyter notebook with the data loading exploration and cleaning can be found [here](./notebooks/your_notebook_name.ipynb)
+Prior to the analysis, a series of rigorous preprocessing checks were performed on the raw dataset to address inconsistencies, handle missing values, and verify data types. The jupyter notebook with the data loading exploration and cleaning can be found [here](./notebooks/project.ipynb)
 
 
 
