@@ -40,7 +40,7 @@ Analysis of this multi-year dataset reveals a business environment characterized
 - **Spending Habits & Pricing**: Analysis of payment distribution and pricing structures indicates that Credit Cards have become the primary transaction vehicle. Furthermore, Transactional data reveals consumer willingness to accept premium pricing for the Sports and Travel product category, which consistently maintains a price point above the average. Conversely, Fashion Accessories is positioned as a high-volume, budget-friendly category, characterized by lower-than-average unit prices. These pricing dynamics, learnt through an audit of average unit costs, suggest that revenue growth in Fashion is driven by quantity rather than individual item margin.
 
 Below is some key graphical representation of the findings using PowerBI
-![](walmart sales dashboard.png)
+![](walmart_sales_dashboard.png)
 
 ## Recommendation 
 Based on the insights learnt through the end-to-end analysis of the Walmart sales data, the following strategic recommendations are proposed to stabilize revenue, optimize operations, and enhance customer satisfaction across the distribution network:
