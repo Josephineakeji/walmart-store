@@ -2,20 +2,17 @@
 -- Walmart Sales Data Analysis SQL Queries
 
 - Top Performing Cities.
-    ```sq
     SELECT 
-	    city, 
-      SUM(total) as total_sales
+		city, 
+    	SUM(total) as total_sales
     FROM 
     walmart
     GROUP BY city
     ORDER BY total_sales DESC
     LIMIT 3;
-    ```
 
 
 - Category Sales Share
-    ```sq
     SELECT
       category, 
       SUM(total) as category_total_sales, 
@@ -24,12 +21,10 @@
     walmart
     GROUP BY category
     ORDER BY category_percent_share DESC;
-    ```
 
 
 - Identify 5 branch with highest decrease ratio in revenue 
 -- compare to last year (current year 2023 and last year 2022)
-    ```sq  
     WITH revenue_2022 AS
     (SELECT 
       branch, 
@@ -62,12 +57,9 @@
     WHERE ls.revenue > cs.revenue
     ORDER BY ratio DESC
     LIMIT 5;
-    ```
 
 
-- Monthly/Quarterly Sales Trend
--- Monthly
-    ```sq
+- Monthly Sales Trend
     SELECT
       SUM(total) as monthly_sales, 
       DATE_FORMAT(STR_TO_DATE(date, '%d/%m/%y'), '%Y-%m') as sales_year_month
@@ -76,11 +68,9 @@
     WHERE DATE_FORMAT(STR_TO_DATE(date, '%d/%m/%y'), '%Y') = '2023'
     GROUP BY sales_year_month
     ORDER BY sales_year_month DESC;
-    ```
 
 
 - Categorize sales into 3 group MORNING, AFTERNOON, EVENING
-    ```sq 
     SELECT
       branch, 
       CASE 
@@ -92,11 +82,9 @@
     FROM walmart
     GROUP BY branch, day_time
     ORDER BY  branch, no_of_invoices DESC;
-    ```
 
 
 - Identify the busiest day for each branch based on the number of transactions
-    ```sq 
     WITH cte as 
     (SELECT
       branch, 
@@ -107,10 +95,9 @@
     GROUP BY branch, day_name)
     SELECT * FROM cte
     WHERE ranking = 1;
-    ```
+
 
 - Branch with the average highest transaction value
-    ```sq
     SELECT
       branch, 
       city,
@@ -119,10 +106,9 @@
     walmart
     GROUP BY branch, city
     ORDER BY avg_total DESC;
-    ```
+
 
 - Identify the highest-rated category in each branch, displaying the branch, category
-    ```sq
     WITH cte as
     (SELECT
       branch, 
@@ -133,11 +119,10 @@
     GROUP BY branch, category)
     SELECT * FROM cte
     WHERE ranks  = 1;
-    ```
 
 
 - Rating by Category
-    ```sq 
+   
     SELECT
       category, 
       AVG(rating) as avg_rating
@@ -145,11 +130,9 @@
     walmart
     GROUP BY category
     ORDER BY avg_rating DESC;
-    ```
 
 
 - Low-Rated Transactions
-    ```sq 
     SELECT
       invoice_ID,
       city,
@@ -160,11 +143,9 @@
     walmart
     WHERE rating < (SELECT AVG(rating) FROM walmart)
     ORDER BY rating, total DESC;
-    ```
 
 
 - Overrall Top Categories for all stores
-    ```sq 
     SELECT
       category, 
       SUM(quantity) as total_quantity_sold
@@ -173,11 +154,9 @@
     GROUP BY category
     ORDER BY total_quantity_sold DESC
     LIMIT 3;
-    ```
 
 
 - Sales Distribution by Payment
-    ```sq 
     SELECT
       payment_method, 
       SUM(total) as total_revenue, 
@@ -187,11 +166,10 @@
     walmart
     GROUP BY payment_method
     ORDER BY total_revenue DESC;
-    ```
+
 
 - High-Value vs. Low-Value Items:
--- High-Value
-    ```sq 
+-- High-Value items
     SELECT
       category, 
       AVG(unit_price) as category_avg_price
@@ -204,10 +182,8 @@
     FROM 
     walmart)
     ORDER BY category_avg_price DESC;
-    ```
 
--- low value item
-    ```sq 
+-- low-value item
     SELECT
       category, 
       AVG(unit_price) as category_avg_price
@@ -220,7 +196,7 @@
     FROM 
     walmart)
     ORDER BY category_avg_price DESC;
-    ```
+    
 
 
 
@@ -233,5 +209,6 @@
 
     
       
+
 
 
